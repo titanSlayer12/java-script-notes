@@ -3,7 +3,6 @@
 // alert("me"); 
 // document.write("this is document write")
 
-
 // 2. js console API
 // console.log("hello world", 4 + 4, "another log");
 // console.warn("this is warning")
@@ -14,6 +13,11 @@ multi
 Line
 comment
 */
+
+//inner html
+
+// document.getElementById("click").innerHTML = "hello";
+
 
 // 3. js variables
 //what are varaibles?????? = container to store  data values
@@ -46,7 +50,7 @@ comment
 
 // var und = undefined;
 // console.log(undefined);
-    // or
+// or
 // var und
 // console.log(und);
 
@@ -116,6 +120,7 @@ comment
 // console.log(!false);
 // console.log(!true);
 
+
 //functon in js 
 //DRY = Do Not Repeat yourself
 
@@ -138,7 +143,7 @@ comment
 
 //conditional in js
 
-var age = 9;
+// var age = 9;
 
 // if Statment
 // if (age > 18){
@@ -262,7 +267,7 @@ for(var i=0;i<arr.length;i++){
 
 //string method in js
 
-let cmnt = "now you became a web developer you";
+// let cmnt = "now you became a web developer you";
 // console.log(cmnt.length)
 // console.log(cmnt.indexOf("you"))
 // console.log(cmnt.lastIndexOf('you'))
@@ -283,94 +288,161 @@ console.log(mydate.getFullYear());
 console.log(mydate.getMinutes());
 */
 
-// Dom Manipulation
+//  DOM manipulation
 
-// let elementid = document.getElementById('click');
-// console.log(elementid);
+// by id
 
-// let elementclass = document.getElementsByClassName('container');
-// console.log(elementclass);
-// elementclass[0].classList.add("bg-primary") //add class throug a css which is not define in a HTML.
-// elementclass[0].classList.add("text")
+let elem = document.getElementById('click')
+// console.log(elem)
 
-// console.log(elementclass[0].innerHTML); // for inner HTML 
-// console.log(elementclass[0].innerText);  // for inner text in HTML
-
-//tag 
-//  tn = document.getElementsByTagName('div');
-//  console.log(tn);
+//  let button = document.getElementById('click')
+// console.log(button)
+// button.style.background = "red"
 
 
-//  CreatedElement = document.createElement('p'); // for create a new element
-//  CreatedElement.innerText = "I am Monkey D luffy"
-//  tn[0].appendChild(CreatedElement);
-//  CreatedElement2 = document.createElement('p');
-//  CreatedElement2.innerText = "I am  luffy"
-//  tn[0].replaceChild(CreatedElement2, CreatedElement);
+//by class
 
-//document
+let ele = document.getElementsByClassName("container")
+// console.log(ele);
+// ele[0].style.background = 'yellow'
+// ele[0].classList.add("bg-primary")
+// ele[0].classList.add("text")
+// console.log(ele[0].innerText)//for inner text
+// console.log(ele[0].innerHTML) // for inner html
 
- //document.links
- //document.images
-//  document.domain
-// document.scripts
-// document.textContent
-//and soo on
+// remove  from element
+// let button = document.getElementsByClassName("b2")
+// console.log(button)
+// button[0].classList.remove('b2')
 
 
-// Selecting using query 
-// sel = document.querySelector('.container')   //first element
-// console.log(sel)
+// tag name
 
-// sel = document.querySelectorAll('.container')   //all element
-// console.log(sel)
+tg = document.getElementsByTagName('p')
+// console.log(tg)
 
-// Events in JavaScript
+// createdElement = document.createElement('p')
+// createdElement.innerText = " th1 is is new para"
+// tg[0].appendChild(createdElement);
 
-// function clicked()
-// {  //from html define in button 
-//   console.log("button was clicked")
+// replace a tag
+// createdElement2 = document.createElement('em')
+// createdElement2.innerText = " this is new para"
+// tg[0].replaceChild(createdElement2, createdElement);
+
+ 
+
+// console.log(document.title)
+// console.log(document.location)
+// console.log(document.URL)
+// console.log(document.links)
+// console.log(document.scripts)
+// console.log(document.images )
+// console.log(document.domain)
+
+// query selector
+
+query = document.querySelector('.container')
+// console.log(query)
+//return only one element
+
+query = document.querySelector('.container')
+// console.log(query)
+//return all element
+
+
+// EVENTS IN JAVASCRIPT
+
+// function clicked(){
+//   console.log("the button clicked......")
 // }
 
-// function mouse()
-// {  //from html define in button 
-//   //alert("hello")
-//   console.log("hello")
-// }
-
-// function Focusevent()
-// {  
-//   //from html define in input for change in color in input 
-//   document.getElementById("input1").style.background="red";
-// }
-
-
-// function keydown()
-// {  
-//   //from html define in input for change in color in input 
-//   document.getElementById("input2")
-//   alert("pressed a key")
-// }
-
-
-// window.onload =function(){ // from html
-//   console.log('the document was loaded'
-//   )
-// }
-
-
-// function click()
-// {  //from html define in button
-//   document.innerHTML 
-//   console.log("button was clicked")
-// }
-
-
-
-
-
-
-// firstContainer.addEventListner('click',function(){
-//   document.querySelectorAll('.container')[1].innerHTML
-//   console.log("clicked on Container")
+// firstcontainer.addEventListener('click', function(){
+//   console.log("click hua")
 // })
+
+// firstcontainer.addEventListener('mauseover', function(){
+//   console.log("mouseover work")
+// })
+// firstcontainer.addEventListener('mouseout', function(){
+//   console.log("mauseout work")
+// })
+
+// firstcontainer.addEventListener('mouseup', function(){
+//   console.log("mause up")
+// })
+
+// firstcontainer.addEventListener('mousedown', function(){
+//   console.log("mause down")
+// })
+ 
+ // change a text by event
+
+//  firstcontainer.addEventListener('click', function(){
+//    document.querySelectorAll('.container')[1].innerHTML = "<b> paragraph change </b>"
+//   console.log("click on container")
+// })
+
+// let prevHTML = document.querySelectorAll('.container')[1].innerHTML;
+// firstcontainer.addEventListener('mouseup', function(){
+//   document.querySelectorAll('.container')[1].innerHTML= prevHTML;
+//   console.log("mause up")
+// })
+
+// firstcontainer.addEventListener('mousedown', function(){
+//    document.querySelectorAll('.container')[1].innerHTML = "<b> paragraph change </b>"
+//   console.log("mause down")
+// })
+
+
+
+// set time out and setInterval
+
+// Arrow fuction
+
+//normal function
+// function sum(a,b){
+//   return a+b;
+// }
+
+sum = (a,b)=>{  //arrow fucton
+  return a+b;
+}
+
+// set timeout
+
+logKaro = ()=>{
+  //  document.querySelectorAll('.container')[1].innerHTML = "<b> set interval fire </b>"
+  // console.log(" am your log")
+}
+
+// setTimeout(logKaro,5000);
+// use clearTime() to set time out
+
+// setInterval
+
+// setInterval(logKaro,2000);
+// clr = setInterval(logKaro,2000); //here the clr used for stop setInterval in clearInterval
+//  clearInterval() is used to stop setInerval
+
+
+// JAVASCRIPT LOCAL Storage
+
+
+//  json
+
+// obj = {name:"sudhir",length: 1, a:{this:"that"}}
+// obj = {name:"sudhir",length: 1, a:{this:'th"at'}}
+// json did not accept double quote
+// jso = JSON.stringify(obj);
+// console.log(jso)
+// console.log(typeof jso)
+// console.log(typeof obj)
+
+// parsed = JSON.parse('{"name":"sudhir","length": 1, "a":{"this":"that"}}')
+// console.log(parsed);
+
+// Template literals or backtrcks
+
+// a = 34;
+// console.log('this is my ${a}')
