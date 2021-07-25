@@ -12,17 +12,17 @@ console.log(typeof x); // "number"
 
 //fractional numbers
 var y = 2.4;
-console.log(y);
+console.log(y); // 2.4
 
 //5.3 * 10^8
 var z = 5.3e8;
-console.log(z);
+console.log(z); // 5.300000000
 
 //max min in JS
 var max = Number.MAX_VALUE;
-console.log(max);
+console.log(max);   // 1.7976931348623157e+308
 var min = Number.MIN_VALUE;
-console.log(min);
+console.log(min);  // 5e-324
 
 //arithmetic operation ,+,*,-,/ , +=, -=, *=,
 var a = 4 + 9;
@@ -42,10 +42,10 @@ console.log(12 / 4);
 // 3. Boolean
 
 var cdedf = 10 + "11" + true + "10";
-console.log(cdedf);
+console.log(cdedf);  // 1011true10
 
 var cd_e = 10 + +"11" + false + +"110";
-console.log(cd_e);
+console.log(cd_e);  // 131
 
 //...................................
 var b = 3;
@@ -60,15 +60,15 @@ console.log(a1); //6
 console.log(b); // 7
 
 var a1 = b++;
-console.log(a1);
-console.log(b);
+console.log(a1);  //7
+console.log(b);  //8
 
 var a2 = ++b;
-console.log(a2);
+console.log(a2); // 9
 
 //b -= 1;
 b--;
-console.log(b);
+console.log(b); //8
 //.............................................................................
 //operator precedence
 var c = 4 * (5 + 3);
@@ -115,8 +115,8 @@ console.log(k);
 
 //parse a string and return an integer
 var number = "3";
-console.log(parseInt(number));
-console.log(typeof parseInt(number));
-console.log(parseInt("not a number"));
-console.log(typeof parseInt("not a number"));
+console.log(parseInt(number)); // 3
+console.log(typeof parseInt(number)); // number
+console.log(parseInt("not a number")); // NaN
+console.log(typeof parseInt("not a number"));  // undefined
 //.......................................................................
