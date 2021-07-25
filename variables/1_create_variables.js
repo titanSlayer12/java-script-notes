@@ -15,23 +15,23 @@
 
 //declare a variable
 var score;
-console.log(score);
+console.log(score); //undefined
 
 var abc = 10;
 var abc ;
-console.log(abc);
+console.log(abc); // undefined
 
 //declare a variable and initialize
 var livesLeft = 3;
 console.log(livesLeft);
 
 //re-assign a value to our variable livesLeft
-livesLeft = 2;
-console.log(livesLeft);
+livesLeft = 2; 
+console.log(livesLeft);  //2
 
 //constants
 const firstname = 'John';
-console.log(firstname);
+console.log(firstname);   // John
 
 
 //.....................................................
