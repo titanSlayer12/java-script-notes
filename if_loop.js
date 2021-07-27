@@ -18,7 +18,7 @@ else
 
 // Find the biggest number out of a,b,c,d using if-else condition statement where a = 10, b= 30, c = 40 & d = -104
 
-f(a>b)
+if(a>b)
     if(a>c)
         if(a>d) console.log('a is greater');
         else console.log('d is greater');
@@ -36,7 +36,8 @@ else
 
 
 // Find the biggest number out of a,b,c,d,e using if-else condition statement where a = 10, b= 30, c = 40 & d = -10 & e = 770
-f(a>b)
+
+if(a>b)
     if(a>c)
         if(a>d)
             if(a>e) console.log('a is greater');
