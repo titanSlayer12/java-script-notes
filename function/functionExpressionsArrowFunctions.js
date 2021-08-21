@@ -1,43 +1,74 @@
+// Traditional Function
+function (a){
+  return a + 100;
+}
+
+// Arrow Function Break Down
+
+// 1. Remove the word "function" and place arrow between the argument and opening body bracket
+(a) => {
+  return a + 100;
+}
+
+// 2. Remove the body braces and word "return" -- the return is implied.
+(a) => a + 100;
+
+// 3. Remove the argument parentheses
+a => a + 100;
 
 
-/*
-    Arrow Functions
-        - do not create a 'this' object.
+// Note: As shown above, the { braces } and ( parentheses ) and "return" are required in some cases.
 
-*/
+// example
+
+// Traditional Function
+function (a, b){
+  return a + b + 100;
+}
+
+// Arrow Function
+(a, b) => a + b + 100;
+
+// Traditional Function (no arguments)
+let a = 4;
+let b = 2;
+function (){
+  return a + b + 100;
+}
+
+// Arrow Function (no arguments)
+let a = 4;
+let b = 2;
+() => a + b + 100;
+
+/// or named functions we treat arrow expressions like variables:
+
+// Traditional Function
+function bob (a){
+  return a + 100;
+}
+
+// Arrow Function
+let bob = a => a + 100;
+
+
+// example
+
+'use strict';
+
+var obj = { // does not create a new scope
+  i: 10,
+  b: () => console.log(this.i, this),
+  c: function() {
+    console.log(this.i, this);
+  }
+}
+
+obj.b(); // prints undefined, Window {...} (or the global object)
+obj.c(); // prints 10, Object {...}
 
 
 
-// this = window object
-var coder01 = {
-    username: 'joe',
-    years: 3,
-    languages: ['js', 'ruby', 'scala'],
-    company: {
-        name: 'Coder Inc',
-        location: 'San Francisco'
-    },
-    logStatus: function()  {
-        // this = owner object
-        console.log('working from office');
-    },
-    logProfile: function()  {
-        console.log('username: ', this.username);
-        console.log('years coding: ', this.years);
-        console.log('languages:', this.languages.join(', '));
-        console.log('company name: ', this.company.name);
-        console.log('company location: ',this.company.location);
-    }
-};
 
-console.log(coder01.username);
-coder01.logStatus();
-coder01.logProfile();
 
-var coder03 = coder01;
 
-coder03.username = 'maya';
-console.log(coder03.username);
-
-coder03['username'] = 'maya01';
-console.log(coder03.username);
